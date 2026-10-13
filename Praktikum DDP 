@@ -1,0 +1,124 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNRUnTtVmXqAuBuKPzudBsk",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kholidahyan4-pixel/Praktikum-DDP/blob/main/Praktikum%20DDP%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vMptUqi96QdA",
+        "outputId": "c11efa33-3091-4b46-c7f2-d2ce5c6ec98a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "list awal: \n",
+            "['avanza', 'mobil', '1500cc', 'putih', '2roda']\n",
+            "\n",
+            "list kendaraan setelah ditambahkan :\n",
+            "['avanza', 'mobil', 'toyota', '1500cc', 'putih', '2roda', '243 juta', 'CVT']\n"
+          ]
+        }
+      ],
+      "source": [
+        "kendaraan = [\"avanza\",\"mobil\",\"1500cc\",\"putih\",\"2roda\"]\n",
+        "print(\"list awal: \")\n",
+        "print(kendaraan)\n",
+        "\n",
+        "# enambahkan harga dan tipe kendaraan di belakang\n",
+        "kendaraan.append(\"243 juta\")\n",
+        "kendaraan.append(\"CVT\")\n",
+        "\n",
+        "# menambahkan merek kendaraan\n",
+        "kendaraan.insert(2,\"toyota\")\n",
+        "\n",
+        "print(\"\\nlist kendaraan setelah ditambahkan :\")\n",
+        "print(kendaraan)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"silahkan pilih bangun datar\")\n",
+        "print(\"1. persegi\")\n",
+        "print(\"2. lingkaran\")\n",
+        "print(\"3. segitiga\")\n",
+        "\n",
+        "pilih_bangun_datar = int(input(\"pilih bangun datar: \"))\n",
+        "\n",
+        "match pilih_bangun_datar:\n",
+        "    case 1:\n",
+        "        sisi = float(input(\"masukan sisi: \"))\n",
+        "        luas = sisi * sisi\n",
+        "        print(\"luas persegi=\", luas)\n",
+        "\n",
+        "    case 2:\n",
+        "       jari = float(input(\"masukkan jari-jari\"))\n",
+        "       luas = 3.14 * jari ** 2\n",
+        "       print(\"luas lingkaran\", luas)\n",
+        "\n",
+        "    case 3:\n",
+        "        alas = float(input(\"masukkan alas:\"))\n",
+        "        tinggi = float(input(\"masukkan tinggi:\"))\n",
+        "        luas = 0.5 * alas * tinggi\n",
+        "        print(\"luas segitiga\", luas)\n",
+        "\n",
+        "    case _:\n",
+        "        print(\"kamu salah pilih\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VF0VY-M06Yby",
+        "outputId": "d2caebe2-a574-4f5a-bad1-9be0b3e53248"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "silahkan pilih bangun datar\n",
+            "1. persegi\n",
+            "2. lingkaran\n",
+            "3. segitiga\n",
+            "pilih bangun datar: 3\n",
+            "masukkan alas:5\n",
+            "masukkan tinggi:8\n",
+            "luas segitiga 20.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
